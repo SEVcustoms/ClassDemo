@@ -24,6 +24,9 @@ public class DialogClass {
             if (command == 3) {
                 UserList.delitUserInformation();
             }
+            if (command == 4) {
+                System.out.println("Команда в разработке...");
+            }
         }
     }
 }
