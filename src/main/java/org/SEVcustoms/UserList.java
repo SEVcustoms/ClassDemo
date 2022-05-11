@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class UserList {
-    static ArrayList<String> userNameList = new ArrayList<>();
-    static ArrayList<Integer> userAgeList = new ArrayList<>();
+    private static ArrayList<String> userNameList = new ArrayList<>();
+    private static ArrayList<Integer> userAgeList = new ArrayList<>();
     private static String name;
     private static String surname;
     private static int age;
