@@ -9,7 +9,7 @@ public class DialogClass {
         while (true) {
             System.out.println("Выбирите команду: 1 - добавить пользователя, " +
                     "2 - распечатать список пользователей, " +
-                    "3 - удалить пользователя, 0 - выход");
+                    "3 - удалить пользователя, 4 - поменять местами пользователей, 0 - выход");
             command = scr.nextInt();
             if (command == 0) {
                 System.out.println("Выход.");
@@ -25,8 +25,8 @@ public class DialogClass {
                 UserList.delitUserInformation();
             }
             if (command == 4) {
-                System.out.println("Команда в разработке...");
-            }
+                UserList.replaceUserInfomation();
+            } else System.out.println("Неизвестная команда.");
         }
     }
 }

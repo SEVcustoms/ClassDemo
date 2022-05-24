@@ -46,4 +46,28 @@ public class UserList {
             }
         }
     }
+    public static void replaceUserInfomation(){
+        Scanner scanner = new Scanner(System.in);
+        while (true) {
+            System.out.println("Введите номер пользователя, чью позицию хотите поменять");
+            int numberOfChande = scanner.nextInt();
+            if (numberOfChande < 1 || numberOfChande > userNameList.size()) {
+                System.out.println("Введен неверный номер пользователя");
+            }
+            System.out.println("Введите номер пользователя, на чью позицию хотите поменять");
+            int numberToChande = scanner.nextInt();
+            if (numberToChande < 1 || numberToChande > userNameList.size()) {
+                System.out.println("Введен неверный номер пользователя");
+            } else {
+                String chandgeUserName = userNameList.get(numberOfChande - 1);
+                int chandgeUserAge = userAgeList.get(numberOfChande - 1);
+                userNameList.set(numberOfChande - 1, userNameList.get(numberToChande - 1));
+                userAgeList.set(numberOfChande - 1, userAgeList.get(numberToChande - 1));
+                userNameList.set(numberToChande - 1, chandgeUserName);
+                userAgeList.set(numberToChande - 1, chandgeUserAge);
+                UserList.getUserInformation();
+                break;
+            }
+        }
+    }
 }
